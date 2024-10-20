@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #A881E6;
+  --secondary: #7450AC;
+  --ternary: #523480;
+  --background: #ffffff;
+  --foreground: #17171A;
+  --foreground1: #111112;
+  --border: #252529;
+  --sucess: #4E995E;
+  --sucess-dark: #2F723D;
+  --color0: #DB5BBF;
+  --color1: #E07B67;
+  --color2: #BB9F3A;
+  --color3: #8CAD51;
+  --color4: #7B94CB;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #0C0C0D;
+  height: 100vh;
+  width: 100%;
+  color: var(--background);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.inpt {
+  outline: none;
+  border: none;
+  background-color: var(--foreground1);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+.lbl {
+  color: #AFABB6;
+  margin-bottom: 8px;
+}
+
+.slct {
+  height: 100%;
+  outline: none;
+  background-color: #17171A;
+  color: #AFABB6;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  padding: 0px 20px;
+}
+
+.btn {
+  height: 60px;
+  width: 60px;
+  background-color: var(--secondary);
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50rem;
+  margin: auto 0;
+}
+
+.container {
+  top: 6%;
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.item {
+  background-color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.custom-label {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-color: inherit;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid var(--secondary);
+  }
+
+  input[type="checkbox"]:checked + .custom-label {
+    background-color: #4caf50;
+    border: none;
+  }
+
+  input[type="checkbox"]:checked + .custom-label::after {
+    content: '✓';
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    font-size: 16px;
+    color: white;
+  }
+  .name {
+    text-decoration: none;
+  }
+
+  .name-checked {
+    text-decoration: line-through;
+  }
+
+  .item {
+    opacity: 1;
+  }
+
+  .item-checked {
+    opacity: 0.6;
+  }
+
+  .links {
+    background-color: var(--secondary);
+    transition: all ease-in-out 0.2s;
+  }
+
+  .links:hover {
+    opacity: 0.8;
+    transition: all ease-in-out 0.2s;
+  }
+
+  .links.selected {
+    background-color: inherit;
+    border: 1px solid var(--primary);
+  }
